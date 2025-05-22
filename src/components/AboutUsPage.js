@@ -6,7 +6,7 @@ const AboutUsPage = () => {
     <div className="about-us-page">
       <h1>About HASK Softwares</h1>
       <p>
-        Founded in 2023, HASK Softwares is committed to delivering cutting-edge software solutions 
+        HASK Softwares is committed to delivering cutting-edge software solutions 
         specifically designed for the HVAC and warehousing industries. We specialize in custom software 
         development, web applications, and enterprise solutions, tailored to meet the unique challenges 
         of our clients.

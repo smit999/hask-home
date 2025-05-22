@@ -10,9 +10,9 @@ const ContactUsPage = () => {
         for inquiries, project discussions, or support.
       </p>
       <ul>
-        <li>Email: contact@hasksoftwares.com</li>
-        <li>Phone: (123) 456-7890</li>
-        <li>Address: 123 Innovation Drive, Tech City, TX 75001</li>
+        <li>Email: info@hasksoftwares.com</li>
+        <li>Phone/Text: (702) 706-8208</li>
+        <li>Locations: West Bridgewater MA Usa / Torronto ON Canada </li>
       </ul>
     </div>
   );
