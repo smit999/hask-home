@@ -1,4 +1,4 @@
-name = "your-worker-name" # Replace with your desired worker name
+name = "welcome-hask" # Replace with your desired worker name
 main = "src/index.ts" # Or wherever your worker's entry point is
 compatibility_date = "2025-05-22" # Keep this as is or update to today's date
 
