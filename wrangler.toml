@@ -1,8 +1,9 @@
 name = "welcome-hask" # Replace with your desired worker name
-main = "src/index.ts" # Or wherever your worker's entry point is
+#main = "src/index.ts" # Or wherever your worker's entry point is
 compatibility_date = "2025-05-22" # Keep this as is or update to today's date
+main = "worker/index.js"
 
 # Add or modify this section for static asset serving
 [site]
 bucket = "./build" # This tells Cloudflare to serve files from your React build directory
-entry-point = "worker" # This is often 'worker' for a Workers Sites project
+# entry-point = "worker" # This is often 'worker' for a Workers Sites project
