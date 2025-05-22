@@ -1,0 +1,48 @@
+.header {
+  background-color: #333; /* Darker shade for header */
+  padding: 15px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none; /* In case it's a Link component */
+}
+
+.logo:hover {
+  color: #61dafb; /* React blue for hover, or any primary color */
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin-left: 25px;
+}
+
+.header nav ul li a { /* This targets the Link components */
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  background-color: #555;
+  color: #61dafb; /* React blue or primary color */
+}
+
+/* Style for active link can be added later with NavLink if needed */
