@@ -1,0 +1,41 @@
+.projects-page {
+  /* padding: 20px; Padding is now handled by .content in App.css */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribute items evenly with space around */
+  gap: 20px; /* Adds space between items, alternative to margin on items */
+}
+
+.projects-page h1 {
+  font-size: 2em; /* Slightly smaller than global h1 */
+  text-align: center;
+  margin-bottom: 30px; /* More bottom margin than global h1 */
+  color: #333;
+  width: 100%; /* Ensure h1 takes full width above the flex items */
+}
+
+.project-item {
+  background-color: #ffffff; /* Brighter background for cards */
+  border: 1px solid #e0e0e0; /* Lighter border */
+  padding: 20px;
+  /* margin-bottom: 25px; Replaced by gap on container or individual margin */
+  margin: 10px; /* Provides space when items wrap */
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  text-align: left; /* Override App.css text-align if it was center */
+  flex: 1 1 300px; /* Flex properties: grow, shrink, basis */
+  min-width: 280px; /* Ensure items don't get too small before wrapping */
+  max-width: 45%; /* Prevent items from becoming too wide on very large screens if only two items */
+}
+
+.project-item h2 {
+  font-size: 1.5em; /* Overrides global h2 */
+  margin-bottom: 10px;
+  color: #333; /* Consistent with global heading color */
+}
+
+.project-item p {
+  font-size: 1em; /* Consistent with global p */
+  line-height: 1.6; /* Consistent with global p */
+  color: #555; /* Consistent with global p */
+}

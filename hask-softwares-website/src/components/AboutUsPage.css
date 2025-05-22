@@ -1,0 +1,20 @@
+.about-us-page {
+  /* padding: 20px; Padding is now handled by .content in App.css */
+  text-align: center;
+}
+
+.about-us-page h1 {
+  font-size: 2em; /* Specific to AboutUsPage */
+  margin-bottom: 20px; /* Specific to AboutUsPage */
+  color: #333;
+}
+
+.about-us-page p {
+  font-size: 1.2em; /* Specific to AboutUsPage */
+  line-height: 1.6;
+  color: #555; /* Consistent with global p style */
+  max-width: 800px; /* Constrain width for readability */
+  margin-left: auto; /* Center the paragraph block */
+  margin-right: auto;
+  margin-bottom: 1em; /* Ensure space below paragraph if followed by other elements */
+}
