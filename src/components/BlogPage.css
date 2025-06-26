@@ -60,3 +60,31 @@
 .blog-post-preview-readmore:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .blog-page-title {
+    font-size: 2em; /* Adjusted from 2.5em */
+  }
+
+  .blog-post-preview-title a {
+    font-size: 1.5em; /* Adjusted from 1.8em */
+  }
+
+  .blog-post-preview-summary {
+    font-size: 0.95em; /* Slightly adjust if needed, from 1em */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page-title {
+    font-size: 1.8em;
+  }
+
+  .blog-post-preview-title a {
+    font-size: 1.3em;
+  }
+
+  .blog-post-preview-card {
+    padding: 15px; /* Reduce card padding on very small screens */
+  }
+}

@@ -42,3 +42,32 @@
   background-color: #3498db;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .immersive-header {
+    padding: 8px 15px; /* Slightly reduce padding */
+  }
+  .immersive-title {
+    font-size: 1.3em; /* Reduce title font size */
+  }
+  .immersive-back-link,
+  .immersive-nav-toggle {
+    font-size: 0.8em;
+    padding: 6px 10px; /* Smaller buttons */
+  }
+}
+
+@media (max-width: 480px) { /* Very small screens */
+    .immersive-header-content {
+        /* Could change flex properties if needed, e.g., title wraps or is smaller */
+        /* For now, let's assume font size adjustments are enough. */
+        /* If title is too long, it might need to be handled with text-overflow or smaller font. */
+    }
+    .immersive-title {
+        font-size: 1.1em;
+    }
+     .immersive-back-link,
+    .immersive-nav-toggle {
+        /* Could make icons only if space is very tight */
+    }
+}

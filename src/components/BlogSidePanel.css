@@ -42,3 +42,17 @@
   color: #3498db; /* Active link color */
   font-weight: bold;
 }
+
+@media (max-width: 768px) { /* Same breakpoint as BlogPostPage layout change */
+  .blog-side-panel {
+    width: 100%; /* Take full width when stacked */
+    border-left: none; /* Remove left border */
+    border-top: 1px solid #e0e0e0; /* Add a top border as separator */
+    margin-top: 20px; /* Add margin when stacked below content */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .side-panel-title {
+    font-size: 1.2em; /* Slightly smaller title on mobile */
+  }
+}

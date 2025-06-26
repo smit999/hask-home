@@ -74,3 +74,21 @@
   margin: 20px auto;
   padding: 0 20px; /* Padding on the layout container */
 }
+
+@media (max-width: 768px) { /* Breakpoint for stacking */
+  .blog-post-layout {
+    flex-direction: column;
+    padding: 0 10px; /* Adjust padding for mobile if .content in App.css has none in immersive */
+                       /* App.css .App.immersive-active .content has padding: 0; so this is fine */
+  }
+
+  .blog-post-page { /* Main article content area */
+    /* margin: 0 auto; was for centering text column, might not be needed if it's full width */
+    /* max-width: 760px; was for text column. In column layout, it might be okay to be wider or full width */
+    /* Let's set it to take full width of the column parent */
+    width: 100%;
+    max-width: 100%; /* Override previous max-width for column layout */
+    margin: 0; /* Reset margin */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+}
