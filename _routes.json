@@ -1,5 +1,6 @@
 {
   "version": 1,
   "include": ["/blog/*"],
-  "exclude": []
+  "exclude": [],
+  "fallback": "/site/index.html"
 }
