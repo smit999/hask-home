@@ -1,0 +1,30 @@
+---
+// src/layouts/BaseLayout.astro
+// Basic structure, a real theme would have more here.
+const { title } = Astro.props;
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title ? `${title} - Erudite Theme` : 'Erudite Theme'}</title>
+  <link rel="stylesheet" href="/blog/styles/tailwind.css"> {/* Assuming theme uses this existing file for Tailwind */}
+  {/* Add link to favicons, etc. as before, ensuring /blog prefix */}
+  <link rel="icon" type="image/x-icon" href="/blog/favicon.ico" />
+  <link rel="apple-touch-icon" href="/blog/apple-touch-icon.png" />
+</head>
+<body class="font-sans"> {/* Example: Applying a base font style via Tailwind */}
+  <header class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto">
+      <h1 class="text-xl font-bold"><a href="/blog/">Astro Erudite Blog</a></h1>
+      {/* Navigation could go here */}
+    </div>
+  </header>
+  <main class="container mx-auto p-4">
+    <slot /> {/* Page content will be injected here */}
+  </main>
+  <footer class="bg-gray-200 text-gray-700 p-4 text-center">
+    <p>&copy; 2025 My Blog. Powered by Astro Erudite.</p>
+  </footer>
+</body>
+</html>
