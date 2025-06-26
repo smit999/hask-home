@@ -1,8 +1,8 @@
-.blog-post-page {
-  flex: 1; /* Main content takes available space */
-  max-width: none; /* Remove previous max-width if it was for centered single column */
-  margin: 0; /* Remove previous margin auto */
-  padding: 20px; /* Keep or adjust padding */
+.blog-post-page { /* This is the <article> element */
+  flex: 1;
+  max-width: 760px; /* Max width for the text content itself */
+  margin: 0 auto; /* Center the text column if it's narrower than flex item */
+  padding: 20px; /* Existing padding */
   font-family: 'Georgia', serif; /* Serif for post content for readability */
   line-height: 1.7;
   color: #333;
@@ -58,6 +58,13 @@
 }
 
 /* Add more styles for other elements like blockquotes, lists, code blocks as needed */
+
+.blog-post-header-meta { /* Style for the date under the title (which is in ImmersiveHeader) */
+  text-align: center;
+  margin-bottom: 30px; /* Increased margin */
+  color: #777; /* Consistent with other meta text */
+  font-size: 0.9em;
+}
 
 .blog-post-layout {
   display: flex;

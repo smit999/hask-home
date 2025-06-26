@@ -1,0 +1,44 @@
+/* src/components/ImmersiveHeader.css */
+.immersive-header {
+  padding: 10px 20px;
+  background-color: #fff; /* Light background for immersive header */
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky; /* Make it sticky if desired */
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content if main nav slides under */
+}
+
+.immersive-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px; /* Or your preferred content width */
+  margin: 0 auto;
+}
+
+.immersive-title {
+  font-size: 1.5em; /* Adjust as needed */
+  color: #333;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1; /* Allow title to take space */
+}
+
+.immersive-back-link,
+.immersive-nav-toggle {
+  font-size: 0.9em;
+  color: #3498db;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #3498db;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.immersive-back-link:hover,
+.immersive-nav-toggle:hover {
+  background-color: #3498db;
+  color: white;
+}

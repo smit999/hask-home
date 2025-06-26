@@ -47,3 +47,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* In App.css */
+.App.immersive-active .content {
+  padding: 0; /* Remove padding to let child layout control it */
+  min-height: 100vh; /* Ensure it can take full viewport height */
+  padding-bottom: 0; /* Remove footer-related padding */
+}
