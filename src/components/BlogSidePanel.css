@@ -1,0 +1,44 @@
+.blog-side-panel {
+  width: 280px; /* Fixed width for the side panel */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for the panel */
+  border-left: 1px solid #e0e0e0;
+  font-family: sans-serif;
+}
+
+.side-panel-title {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.side-panel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-panel-item a {
+  display: block;
+  padding: 8px 0px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+  border-bottom: 1px dashed #eee; /* Separator for items */
+}
+
+.side-panel-item:last-child a {
+    border-bottom: none;
+}
+
+.side-panel-item a:hover {
+  color: #3498db;
+}
+
+.side-panel-item.active a {
+  color: #3498db; /* Active link color */
+  font-weight: bold;
+}
