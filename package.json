@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "astro build --root ./blog && BUILD_PATH='./build/site' react-scripts build",
+    "build": "astro build --root ./blog && BUILD_PATH='./build/site' react-scripts build && cp _routes.json build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
