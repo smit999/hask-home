@@ -1,53 +1,41 @@
-// src/App.js
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppProvider } from './contexts/AppContext';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import ProjectsPage from './components/ProjectsPage';
-import AboutUsPage from './components/AboutUsPage';
-import ContactUsPage from './components/ContactUsPage';
-import BlogPage from './components/BlogPage';
-import BlogPostPage from './components/BlogPostPage';
-import { AppProvider, useAppContext } from './contexts/AppContext'; // Import AppProvider and hook
-import ImmersiveHeader from './components/ImmersiveHeader';
+import Home from './Home';
+import Projects from './Projects';
+import About from './About';
+import Contact from './Contact';
+import Blog from './Blog';
+import './App.css';
 
-// Inner component to access context
+// --- Main Application Layout ---
 const MainLayout = () => {
-  const { isImmersiveMode, currentPageTitle, isMainNavVisible } = useAppContext();
-
   return (
-    <div className={`App ${isImmersiveMode ? 'immersive-active' : ''}`}>
-      {/* Conditional Header Rendering Logic */}
-      {isImmersiveMode ? (
-        isMainNavVisible ? <Header /> : <ImmersiveHeader title={currentPageTitle} />
-      ) : (
-        <Header />
-      )}
-
-      <div className="content">
+    <div className="flex flex-col min-h-screen bg-white font-sans text-gray-900">
+      <Navbar />
+      <main className="flex-grow w-full">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/contact" element={<ContactUsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:postId" element={<BlogPostPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:postId" element={<Blog />} />
         </Routes>
-      </div>
-      {!isImmersiveMode && <Footer />} {/* Conditionally render Footer */}
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
-function App() {
+export default function App() {
   return (
-    <AppProvider> {/* Wrap with AppProvider */}
+    <AppProvider>
       <Router>
         <MainLayout />
       </Router>
     </AppProvider>
   );
 }
-
-export default App;
