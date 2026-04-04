@@ -1,29 +1,41 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppProvider } from './contexts/AppContext';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import ProjectsPage from './components/ProjectsPage';
-import AboutUsPage from './components/AboutUsPage';
-import ContactUsPage from './components/ContactUsPage';
+import Home from './Home';
+import Projects from './Projects';
+import About from './About';
+import Contact from './Contact';
+import Blog from './Blog';
+import './App.css';
 
-function App() {
+// --- Main Application Layout ---
+const MainLayout = () => {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/about" element={<AboutUsPage />} />
-            <Route path="/contact" element={<ContactUsPage />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </Router>
+    <div className="flex flex-col min-h-screen bg-white font-sans text-gray-900">
+      <Navbar />
+      <main className="flex-grow w-full">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:postId" element={<Blog />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default function App() {
+  return (
+    <AppProvider>
+      <Router>
+        <MainLayout />
+      </Router>
+    </AppProvider>
   );
 }
-
-export default App;

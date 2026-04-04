@@ -1,9 +1,8 @@
-name = "welcome-hask" # Replace with your desired worker name
-#main = "src/index.ts" # Or wherever your worker's entry point is
-compatibility_date = "2025-05-22" # Keep this as is or update to today's date
-main = "worker/index.js"
+name = "hask-softwares-website" # Ensure this matches your Cloudflare Pages project name
+compatibility_date = "2025-06-26" # Update to a recent date
+pages_build_output_dir = "build"
 
-# Add or modify this section for static asset serving
-[site]
-bucket = "./build" # This tells Cloudflare to serve files from your React build directory
-# entry-point = "worker" # This is often 'worker' for a Workers Sites project
+# Optional: For local development with wrangler pages dev
+# [dev]
+# port = 3000 # Example port
+# command = "npm run start" # If you have a specific dev command that serves both

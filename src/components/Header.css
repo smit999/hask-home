@@ -1,48 +1,105 @@
+/* Existing styles in Header.css should be reviewed. */
+/* Assume existing styles are for desktop or are general. */
+
+/* ... (keep existing .header, .logo, .header nav ul, .header nav ul li a styles) ... */
+/* Ensure existing nav ul is suitable for desktop, e.g., display: flex; */
+/* Original .header nav ul might need to be .main-nav > ul now if .main-nav is the new class on nav */
+/* Let's adjust selectors for clarity: */
+
 .header {
-  background-color: #333; /* Darker shade for header */
+  background-color: #333;
   padding: 15px 30px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1050; /* High z-index */
 }
 
 .logo {
   font-size: 1.8em;
   font-weight: bold;
   color: white;
-  text-decoration: none; /* In case it's a Link component */
+  text-decoration: none;
 }
 
 .logo:hover {
-  color: #61dafb; /* React blue for hover, or any primary color */
+  color: #61dafb;
 }
 
-.header nav ul {
+.main-nav ul { /* Targeting the UL inside the nav */
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: flex; /* For desktop: horizontal layout */
   align-items: center;
 }
 
-.header nav ul li {
-  margin-left: 25px;
+.main-nav ul li {
+  margin-left: 25px; /* Spacing for desktop */
 }
 
-.header nav ul li a { /* This targets the Link components */
+.main-nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.1em;
   padding: 5px 10px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: block; /* Good for touch targets */
 }
 
-.header nav ul li a:hover {
+.main-nav ul li a:hover {
   background-color: #555;
-  color: #61dafb; /* React blue or primary color */
+  color: #61dafb;
 }
 
-/* Style for active link can be added later with NavLink if needed */
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none; /* Hidden by default, shown on mobile */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px; /* Size of hamburger/close icon */
+  cursor: pointer;
+}
+
+/* Styles for Mobile (e.g., screens up to 768px wide) */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; /* Hide desktop nav links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 60px; /* Height of the header, adjust as needed */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Same as header bg */
+    padding: 10px 0; /* Padding for the dropdown items */
+    box-shadow: 0 4px 2px -2px gray;
+  }
+
+  .main-nav.mobile-menu-open ul {
+    display: flex; /* Show when mobile menu is open */
+  }
+
+  .main-nav ul li {
+    margin-left: 0; /* Remove left margin for vertical layout */
+    width: 100%;
+    text-align: center; /* Center text for mobile links */
+  }
+
+  .main-nav ul li a {
+    padding: 15px 10px; /* Larger touch targets for mobile */
+    border-bottom: 1px solid #444; /* Separator for mobile links */
+  }
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show hamburger button on mobile */
+  }
+}

@@ -1,19 +1,61 @@
+/* Existing styles in HomePage.css */
 .home-page {
   /* padding: 20px;  Padding is now handled by .content in App.css */
   text-align: center;
 }
 
 .home-page h1 {
-  font-size: 2.5em; /* Specific to HomePage, overrides global h1 if needed */
-  margin-bottom: 20px; /* Specific to HomePage */
-  color: #333; /* Ensures consistency if not inheriting properly */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .home-page p {
-  font-size: 1.2em; /* Specific to HomePage */
+  font-size: 1.2em;
   line-height: 1.6;
-  color: #555; /* Consistent with global p style */
-  max-width: 800px; /* Constrain width for better readability on large screens */
+  color: #555;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px; /* Added for spacing before CTA */
+}
+
+/* Placeholder for Call to Action - can be styled further */
+.cta-placeholder {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background to make it distinct */
+    border-radius: 8px;
+    display: inline-block; /* So it doesn't take full width unless content pushes it */
+}
+
+.cta-placeholder p {
+    font-size: 1.1em; /* Slightly smaller than main text */
+    margin-bottom: 0; /* Remove default p margin if it's just one line */
+}
+
+.cta-placeholder a {
+    font-weight: bold;
+}
+
+
+/* Styles for Mobile (e.g., screens up to 768px wide) */
+@media (max-width: 768px) {
+  .home-page h1 {
+    font-size: 2em; /* Slightly smaller h1 on mobile */
+  }
+
+  .home-page p { /* This will also affect p within .cta-placeholder if not overridden */
+    font-size: 1em; /* Slightly smaller paragraph text on mobile */
+  }
+
+  .cta-placeholder p { /* Explicitly set CTA p font size for mobile if needed */
+    font-size: 1em; /* Match other p tags or adjust as needed */
+  }
+}
+
+@media (max-width: 480px) { /* Even smaller screens */
+    .home-page h1 {
+        font-size: 1.8em;
+    }
 }

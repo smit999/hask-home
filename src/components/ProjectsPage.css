@@ -39,3 +39,17 @@
   line-height: 1.6; /* Consistent with global p */
   color: #555; /* Consistent with global p */
 }
+
+@media (max-width: 480px) {
+  .projects-page h1 { /* Main page title */
+    font-size: 1.8em;
+  }
+  .project-item h2 { /* Project card titles */
+    font-size: 1.3em;
+  }
+  .project-item {
+    padding: 15px; /* Slightly reduce padding in cards on very small screens */
+    /* flex-basis can be set to 100% if you want them to take full width one per line explicitly */
+    /* but current flex settings should already achieve this when space is limited */
+  }
+}
