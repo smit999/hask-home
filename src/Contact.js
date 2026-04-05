@@ -10,18 +10,18 @@ const Contact = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-          <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="John Doe" />
+          <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="John Doe" />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-          <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="john@example.com" />
+          <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="john@example.com" />
         </div>
       </div>
       <div className="mb-8">
         <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-        <textarea rows="5" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none" placeholder="Tell us about your project..."></textarea>
+        <textarea rows="5" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all resize-none" placeholder="Tell us about your project..."></textarea>
       </div>
-      <button type="button" className="w-full py-4 bg-blue-600 text-white font-bold text-lg rounded-xl hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5">
+      <button type="button" className="w-full py-4 bg-brand text-white font-bold text-lg rounded-xl hover:bg-brand/90 transition duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5">
         Send Message
       </button>
     </form>
