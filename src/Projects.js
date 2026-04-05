@@ -32,7 +32,7 @@ const Projects = () => (
           <h3 className="text-2xl font-bold text-gray-800 mb-4 leading-snug">{project.title}</h3>
           <p className="text-gray-600 leading-relaxed flex-grow">{project.description}</p>
           <div className="mt-8 pt-4 border-t border-gray-100">
-            <button className="text-blue-600 font-semibold hover:text-blue-800 transition-colors inline-flex items-center">
+            <button className="text-brand font-semibold hover:text-brand/80 transition-colors inline-flex items-center">
               Learn More <span className="ml-2">&rarr;</span>
             </button>
           </div>
